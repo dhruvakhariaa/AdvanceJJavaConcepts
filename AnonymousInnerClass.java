@@ -1,5 +1,4 @@
-class A
-{
+class A{
 	public void show() 
 	{
 		System.out.println("in A show");
@@ -13,6 +12,10 @@ class A
 //	}
 //}
 
+abstract class B{
+	public abstract void show();
+}
+
 public class  AnonymousInnerClass{
     public static void main(String[] args) {
     	
@@ -23,9 +26,18 @@ public class  AnonymousInnerClass{
 			@Override
     		public void show()
     		{
-    			System.out.println("in new show");
+    			System.out.println("in A new show");
     		}
     	};
     	obj.show();
+
+		B obj1 = new B()
+		{
+			@Override
+			public void show(){
+				System.out.println("in B new show");
+			}
+		};
+		obj1.show();
     }
 }
