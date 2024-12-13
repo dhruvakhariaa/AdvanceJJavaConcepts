@@ -6,6 +6,11 @@ interface A
 //	void show(int i,int j);
 }
 
+@FunctionalInterface
+interface B{
+	int add(int i, int j);
+}
+
 
 public class LambdaExpressions{
     public static void main(String[] args) {
@@ -30,5 +35,21 @@ public class LambdaExpressions{
     	
     	A obj = i -> System.out.println("in show "+ i);
     	obj.show(5);
+
+		// B obj1 = new B(){ //Normal declaration of the anonymous inner class without lambda expressions
+		// 	public int add(int i, int j){
+		// 		return i+j;
+		// 	}
+		// };
+		// System.out.println(obj1.add(5, 8));
+
+		// B obj1 = (i,j) -> 
+		// {
+		// 	return i+j;
+		// };
+		// System.out.println(obj1.add(5, 8));
+
+		B obj1 = (i,j) -> i+j; // No need to write return keyword
+		System.out.println(obj1.add(5, 8));
     }
 }
