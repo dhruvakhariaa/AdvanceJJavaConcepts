@@ -1,4 +1,4 @@
-interface A
+interface Aaa
 {
 //	public abstract void show();
 //	public abstract void config();
@@ -9,7 +9,7 @@ interface A
 	void config();
 }
 
-class B implements A
+class Bbb implements Aaa
 {
     @Override
 	public void show()
@@ -26,15 +26,15 @@ class B implements A
 public class Interfaces{
     public static void main(String[] args) {
 
-    	A obj;
-    	obj=new B();
+    	Aaa obj;
+    	obj=new Bbb();
     	
     	obj.show();
     	obj.config();
     	
     	//A.AREA="Hyderabad";
     	
-    	System.out.println(A.AREA);
+    	System.out.println(Aaa.AREA);
         
     }
 }

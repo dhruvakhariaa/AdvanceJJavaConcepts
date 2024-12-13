@@ -1,4 +1,4 @@
-class A
+class AA
 {
     @SuppressWarnings("unused")
 	int age;
@@ -8,7 +8,7 @@ class A
 		System.out.println("in show");
 	}
 	
-	class B
+	class BB
 	{
 		public void config()
 		{
@@ -16,7 +16,7 @@ class A
 		}
 	}
 	
-	static class C
+	static class CC
 	{
 		public void config()
 		{
@@ -28,13 +28,13 @@ class A
 
 public class  InnerClass{
     public static void main(String[] args) {
-    	A obj=new A();
+    	AA obj=new AA();
     	obj.show();
     	
-    	A.B obj1=obj.new B();
+    	AA.BB obj1=obj.new BB();
     	obj1.config();
     	
-    	A.C obj2=new A.C();
+    	AA.CC obj2=new AA.CC();
     	obj2.config();
 
     }
