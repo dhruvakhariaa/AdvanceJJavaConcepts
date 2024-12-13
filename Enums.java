@@ -1,10 +1,11 @@
 import java.util.Arrays;
 
 enum Status{
-    Running, Pending, Completed, Cancelled; //Objects of enum class
+    Running, Pending, Completed, Cancelled; //Objects of enum class, also known as NAMED CONSTANTS
 }
 
 public class Enums {
+    @SuppressWarnings("ImplicitArrayToString")
     public static void main(String[] args) {
         Status s0= Status.Running;
     	Status s1= Status.Cancelled;
@@ -23,5 +24,26 @@ public class Enums {
     		// System.out.println(s);
     		System.out.println(s+" : "+s.ordinal());
     	}
+
+
+		switch(s1) //One way to perform operations for each object in enums class
+    	{
+    		case Running -> System.out.println("All Good");
+    			
+    		case Cancelled -> System.out.println("Try Again");
+    			
+    		case Pending -> System.out.println("Please Wait");
+    		
+    		default -> System.out.println("Done");
+    	}
+
+		if(s2==Status.Running)  //Another way to perform operations on enums objects
+    		System.out.println("All Good");
+    	else if(s2==Status.Cancelled)
+    		System.out.println("Try Again");
+    	else if ( s2==Status.Pending)
+    		System.out.println("Please Wait");
+    	else
+    		System.out.println("Done");
     }
 }
