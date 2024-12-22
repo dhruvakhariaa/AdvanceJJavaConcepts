@@ -1,4 +1,4 @@
-public class throwKeyword{
+public class ThrowKeyword{
     public static void main(String[] args) {
     	
 //    	int i=2;
