@@ -1,11 +1,11 @@
 @Deprecated
-class Aa{
+class A_1{
 	public void showTheDataWhichBelongsToThisClass(){
 		System.out.println("in show A");
 	}
 }
 
-class Bb extends Aa{
+class B_1 extends A_1{
 	@Override //Helps the compiler to know better
 //	public void showTheDataWhichBelongToThisClass()
 	public void showTheDataWhichBelongsToThisClass(){
@@ -16,7 +16,7 @@ class Bb extends Aa{
 public class Annotations{
     public static void main(String[] args) {
     	
-    	Bb obj=new Bb();
+    	B_1 obj=new B_1();
     	obj.showTheDataWhichBelongsToThisClass();
     	
     }
