@@ -1,5 +1,5 @@
 @FunctionalInterface
-interface A
+interface A_6
 {
 //	void show();
 	void show(int i);
@@ -7,7 +7,7 @@ interface A
 }
 
 @FunctionalInterface
-interface B{
+interface B_6{
 	int add(int i, int j);
 }
 
@@ -27,13 +27,13 @@ public class LambdaExpressions{
 //    	};
 //    	obj.show(5);
     	
-//    	A obj = (int i) ->System.out.println("in show "+i);
+//    	AaAa obj = (int i) ->System.out.println("in show "+i);
 //    	obj.show(5);
     	
 //    	A obj = (int i,int j) ->System.out.println("in show " + i + j);
 //    	obj.show(5,8);
     	
-    	A obj = i -> System.out.println("in show "+ i);
+    	A_6 obj = i -> System.out.println("in show "+ i);
     	obj.show(5);
 
 		// B obj1 = new B(){ //Normal declaration of the anonymous inner class without lambda expressions
@@ -49,7 +49,7 @@ public class LambdaExpressions{
 		// };
 		// System.out.println(obj1.add(5, 8));
 
-		B obj1 = (i,j) -> i+j; // No need to write return keyword
+		B_6 obj1 = (i,j) -> i+j; // No need to write return keyword
 		System.out.println(obj1.add(5, 8));
     }
 }

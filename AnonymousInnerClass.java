@@ -1,4 +1,4 @@
-class A{
+class A_2{
 	public void show() 
 	{
 		System.out.println("in A show");
@@ -12,7 +12,7 @@ class A{
 //	}
 //}
 
-abstract class B{
+abstract class B_2{
 	public abstract void show();
 }
 
@@ -21,7 +21,7 @@ public class  AnonymousInnerClass{
     	
     	//A obj=new B();
     	
-    	A obj=new A() 
+    	A_2 obj=new A_2() 
     	{
 			@Override
     		public void show()
@@ -31,7 +31,7 @@ public class  AnonymousInnerClass{
     	};
     	obj.show();
 
-		B obj1 = new B()
+		B_2 obj1 = new B_2()
 		{
 			@Override
 			public void show(){

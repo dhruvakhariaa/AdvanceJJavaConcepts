@@ -1,12 +1,13 @@
-class DhruvException extends Exception
+@SuppressWarnings("unused")
+class DhruvNewException extends Exception
 {
-	public DhruvException(String string)
+	public DhruvNewException(String string)
 	{
 		super(string);
 	}
 }
 
-class A
+class AModified
 {
 	public void show() throws ClassNotFoundException
 	{
@@ -41,7 +42,7 @@ public class ThrowsKeyword{
 //    		System.out.println("Not able to find theh class");
 //    	}
     	
-    	A obj=new A();
+    	AModified obj=new AModified();
     	try {
     		obj.show();
     	}catch(ClassNotFoundException e)

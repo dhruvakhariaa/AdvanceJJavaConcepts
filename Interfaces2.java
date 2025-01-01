@@ -2,7 +2,7 @@
 // class - interface -> implements
 // interface - interface -> extends
 
-interface A
+interface A_5
 {
 //	public abstract void show();
 //	public abstract void config();
@@ -13,16 +13,16 @@ interface A
 	void config();
 }
 
-interface X
+interface X_1
 {
 	void run();
 }
-interface Y extends X
+interface Y_1 extends X_1
 {
 	
 }
 
-class B implements A,Y
+class Bbbb implements A_5,Y_1
 {
 	@Override
 	public void show()
@@ -44,18 +44,18 @@ class B implements A,Y
 public class Interfaces2{
     public static void main(String[] args) {
 
-    	A obj;
-    	obj=new B();
+    	A_5 obj;
+    	obj=new Bbbb();
     	
     	obj.show();
     	obj.config();
     	
-    	X obj1=new B();
+    	X_1 obj1=new Bbbb();
     	obj1.run();
     	
  //   	A.area="Hyderabad";
     	
-    	System.out.println(A.AREA);
+    	System.out.println(A_5.AREA);
         
     }
 }
